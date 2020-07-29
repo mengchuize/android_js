@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body>
+
+    <div>
+        <button onClick="window.test.actionFromJs()">点击调用Android代码</button>
+    </div>
+    <br/>
+    <div>
+        <button onClick="window.test.actionFromJsWithParam('come from Js')">点击调用Android代码并传递参数</button>
+    </div>
+    <p id="test-p">hello!</p>
+    <script type="text/javascript">
+        function actionFromAndroid(){
+             document.getElementById('test-p').innerHTML += '<br/>action from android.';
+        }
+
+        function actionFromAndroidWithParam(arg){
+             document.getElementById('test-p').innerHTML += '<br/>action from android with param:'+arg+'.';
+        }
+
+    </script>
+</body>
+</html>
